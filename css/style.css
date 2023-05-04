@@ -66,6 +66,12 @@ body._locked {
   }
 }
 
+@media (max-width: 560px) {
+  ._container {
+    padding: 0px 15px;
+  }
+}
+
 /* -----------GENERAL-------------- */
 
 .title-template {
@@ -308,7 +314,7 @@ body._locked {
   color: #ffffff;
   background: #ff6347;
   border-radius: 8px;
-  transition: all 0.4s ease 0s;
+  transition: background 0.4s ease 0s;
 }
 
 .main-block__btn:hover {
@@ -476,6 +482,7 @@ body._locked {
 }
 
 .methods__content {
+  padding-bottom: 16px;
 }
 
 .methods__items {
@@ -525,8 +532,53 @@ body._locked {
 }
 
 @media (max-width: 1200px) {
+  .methods__container {
+    padding: 0px;
+  }
+
+  .methods__title {
+    margin-left: 25px;
+  }
+
+  .methods__content {
+    overflow: visible;
+    overflow-x: scroll;
+    scrollbar-color: #ffd000 #ededed;
+    scrollbar-width: auto;
+  }
+
+  .methods__content::-webkit-scrollbar {
+    height: 4px;
+    background-color: #ededed;
+    border-radius: 2px;
+  }
+
+  .methods__content::-webkit-scrollbar-track {
+    border-radius: 2px;
+    background-color: #ededed;
+    padding: 0 25px;
+    border-right: 25px solid #ffffff;
+    border-left: 25px solid #ffffff;
+    background-clip: padding-box;
+  }
+
+  .methods__content::-webkit-scrollbar-thumb {
+    background-color: #ffd000;
+    border-radius: 2px;
+    padding: 0 25px;
+    border-right: 25px solid transparent;
+    border-left: 25px solid transparent;
+    background-clip: padding-box;
+  }
+
   .methods__items {
-    justify-content: space-evenly;
+    padding: 0px 25px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .item-methods:first-child {
+    /* margin-left: 25px; */
   }
 }
 
@@ -534,6 +586,7 @@ body._locked {
   .item-methods__image {
     margin: 16px 16px 16px 16px;
     border-radius: 16px;
+    max-width: 253px;
   }
 
   .item-methods__title {
@@ -552,25 +605,21 @@ body._locked {
 
 @media (max-width: 767px) {
   .methods__items {
+    gap: 16px;
   }
 
   .item-methods {
     flex: 0 0 33%;
   }
-
-  .item-methods__image {
-    max-width: 253px;
-  }
 }
 
 @media (max-width: 560px) {
-  .methods__content {
-    overflow: visible;
-    overflow-x: auto;
+  .methods__title {
+    margin-left: 15px;
   }
 
   .methods__items {
-    flex-wrap: nowrap;
+    padding: 0px 15px;
   }
 }
 
